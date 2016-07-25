@@ -19,6 +19,13 @@
       <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
       <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
     </p>
+    <!-- dyanmic router view -->
+   <router-view
+     class="view"
+     keep-alive
+     transition
+     transition-mode="out-in">
+   </router-view>
   </div>
 </template>
 
