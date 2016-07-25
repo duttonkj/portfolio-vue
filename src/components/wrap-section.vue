@@ -1,11 +1,18 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+  <section class="grid-item grid-item--color-{{color}} match"  data-section="{{identifier}}">
+    <header>
+      <h4 class="grid-item__headline"><span>{{title}}</span></h4>
+    </header>
+    <span class="grid-item__wrap">
+      <h2>{{msg}}</h2>
+      <slot>This is fallback!</slot>
+    </span>
+  </section>
 </template>
 
 <script>
 export default {
+  props: ['identifier', 'title', 'color'],
   data () {
     return {
       // note: changing this line won't causes changes
