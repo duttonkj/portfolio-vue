@@ -7,8 +7,8 @@ import Routes from './routes/'
 import App from './App'
 
 // Hooks for router
-import AuthHook from './routes/authHook'
-import ScrollHook from './routes/scrollHook'
+import AuthHook from './routes/hooks/auth'
+import ScrollHook from './routes/hooks/scroll'
 
 // Init the router component
 Vue.use(VueRouter)
