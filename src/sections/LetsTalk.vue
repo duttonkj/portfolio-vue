@@ -1,26 +1,37 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="section-animator">
+    <wrap-section id="lets-talk" title="Let's Talk" color="red">
+      <block-base>
+        <block-content>
+          <block-text hero="true">
+            <a class="decorate" href="tel:+6142664669">614-266-4669</a>
+          </block-text>
+          <block-text hero="true">
+            <a class="decorate" href="mailto:hello@kevindutton.com">hello@kevindutton.com</a>
+          </block-text>
+        </block-content>
+      </block-base>
+    </wrap-section>
   </div>
 </template>
 
 <script>
+// Grab all of block templates for use
+import BlocksMixin from './../mixins/blocks'
+import WrapSection from './../components/wrap-section'
+
 export default {
+  mixins: [BlocksMixin],
   data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Lets Talk View!'
-    }
+    return {}
+  },
+  components: {
+    WrapSection
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
-}
+
 </style>
