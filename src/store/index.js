@@ -1,45 +1,34 @@
 import { EventEmitter } from 'events'
 // import { Promise } from 'es6-promise'
-// import io from 'socket.io-client'
-// import feathers from 'feathers/client'
-// import socketio from 'feathers-socketio/client'
-// import hooks from 'feathers-hooks'
-// import userModel from './../models/user'
-// import authentication from 'feathers-authentication/client'
+import io from 'socket.io-client'
+import feathers from 'feathers/client'
+import socketio from 'feathers-socketio/client'
+import hooks from 'feathers-hooks'
+import authentication from 'feathers-authentication/client'
 
-// Import loca data
+// Import local data
 import Endorsements from './endorsements'
+import Skills from './skills'
 
-// const apiUrl = 'http://localhost:3030/'
+const apiUrl = 'http://api.kevindutton.com/'
 const store = new EventEmitter()
-// const socket = io(apiUrl)
+const socket = io(apiUrl)
+// const user = 'viewer@kevindutton.com'
 
 // Initialize our Feathers client application through Socket.io
 // with hooks and authentication.
-// store.api = feathers()
-//   .configure(socketio(socket))
-//   .configure(hooks())
-//   // Use localStorage to store our login token
-//   .configure(authentication({ storage: window.localStorage }))
-//
-// // Setup services API's
-// const userService = store.api.service('users')
-// const challengeService = store.api.service('challenges')
-// const goalService = store.api.service('goals')
-// const inviteService = store.api.service('invites')
-// const challengeUserService = store.api.service('challengeUsers')
-// const checkinService = store.api.service('checkins')
-//
-// var userAuthorized = false
-// var currentUser = userModel.init()
+const api = feathers()
+  .configure(socketio(socket))
+  .configure(hooks())
+  // Use localStorage to store our login token
+  .configure(authentication({ storage: window.localStorage }))
 
-// var getCurrentUserData = () => {
-//   currentUser = store.api.get('user')
-//   store.user.current = currentUser
-//   return currentUser
-// }
+// Setup services API's
+// const workService = store.api.service('works')
 
 export default store
+
+store.user = 'viewer@kevindutton.com'
 
 /*
  * Endorsement Data
@@ -48,6 +37,24 @@ export default store
  */
 
 store.endorsements = Endorsements
+
+/*
+ * Skills Data
+ * ----------------
+ *  return local array of skills
+ */
+
+store.skills = Skills
+
+/*
+ * User Auth
+ * ----------------
+ *
+ */
+
+store.authenticate = obj => {
+  return api.authenticate(obj)
+}
 
 // userService.on('created', message => {
 //   console.log('new USER')

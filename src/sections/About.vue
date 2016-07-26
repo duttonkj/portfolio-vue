@@ -39,38 +39,14 @@ import WrapSection from './../components/wrap-section'
 // Special skills tag needed on this page only
 import SkillsTag from './../components/skills-tag'
 
+// Get skill data from store
+import Store from './../store/'
+
 export default {
   mixins: [BlocksMixin],
   data () {
     return {
-      skills: [
-        'html',
-        'css',
-        'svg',
-        'javascript',
-        'git',
-        'nodejs',
-        'php',
-        'sass',
-        'vuejs',
-        'emberjs',
-        'reactjs',
-        'flux',
-        'jQuery',
-        'webpack',
-        'gulp',
-        'npm',
-        'composer',
-        'coccoa pods',
-        'laravel',
-        'wordpress',
-        'objective-c',
-        'swift',
-        'unbuntu',
-        'apache',
-        'nginx',
-        'conintuous deployments'
-      ]
+      skills: Store.skills
     }
   },
   components: {
