@@ -1,11 +1,14 @@
 <template>
   <div class="section-animator">
-    <wrap-section id="work" title="Selected Work" color="orange">
+    <div v-if="$loadingRouteData">...Fetching Projects...</div>
+    <wrap-section id="work" title="Selected Work" color="orange" v-else>
       <router-view
         class="sub-view"
         keep-alive
         transition
-        transition-mode="out-in">
+        transition-mode="out-in"
+        :projects="projects"
+        >
       </router-view>
     </wrap-section>
   </div>
@@ -14,9 +17,20 @@
 <script>
 import WrapSection from './../components/wrap-section'
 
+// Get store to access work data
+import Store from './../store/'
+
 export default {
   data () {
-    return {}
+    return {
+      projects: []
+    }
+  },
+  // Load in data needed for work section from api
+  route: {
+    data: ({to: {params: { workId }}}) => ({
+      projects: Store.fetchWork()
+    })
   },
   components: {
     WrapSection
