@@ -1,26 +1,18 @@
 <template>
-  <section class="grid-item grid-item--color-{{color}} match"  data-section="{{identifier}}">
-    <header>
-      <h4 class="grid-item__headline"><span>{{title}}</span></h4>
-    </header>
+  <div class="grid-item grid-item--color-{{color}} match"  data-section="{{identifier}}">
+    <h4 class="grid-item__headline"><span>{{title}}</span></h4>
     <span class="grid-item__wrap">
       <h2>{{msg}}</h2>
-      <slot>This is fallback!</slot>
+      <slot></slot>
     </span>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
   props: ['identifier', 'title', 'color'],
   data () {
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello World!'
-    }
+    return {}
   }
 }
 </script>
