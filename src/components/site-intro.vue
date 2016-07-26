@@ -1,8 +1,8 @@
 <template>
   <div class="site-intro">
-        <div class="site-intro__banner site-intro__banner--top">
+        <!-- <div class="site-intro__banner site-intro__banner--top">
           <h1 class="site-intro__title">Kevin Dutton</h1>
-        </div>
+        </div> -->
         <circle-headline></circle-headline>
         <div class="site-intro__banner site-intro__banner--bottom">
           <h4 class="site-intro__subtitle">

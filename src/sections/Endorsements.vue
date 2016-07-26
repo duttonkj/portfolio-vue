@@ -1,19 +1,36 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="section-animator">
+    <wrap-section id="endorsements" title="Endorsements" color="purple">
+      <block-base v-for="endorsement in endorsements">
+        <block-header>
+          <block-title><a href="{{endorsement.url}}" target="_blank">{{endorsement.name}}</a></block-title>
+          <block-subtitle>{{endorsement.role}}</block-subtitle>
+        </block-header>
+        <block-content>
+          <block-text>{{endorsement.text}}</block-text>
+        </block-content>
+      </block-base>
+    </wrap-section>
   </div>
 </template>
 
 <script>
+// Grab all of block templates for use
+import BlocksMixin from './../mixins/blocks'
+import WrapSection from './../components/wrap-section'
+
+// We need data for this page, grab the store
+import store from './../store'
+
 export default {
+  mixins: [BlocksMixin],
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Endorsements View!'
+      endorsements: store.endorsements
     }
+  },
+  components: {
+    WrapSection
   }
 }
 </script>

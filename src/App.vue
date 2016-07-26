@@ -1,6 +1,14 @@
 <template>
   <div id="app">
     <site-header></site-header>
+    <main class="content" role="main">
+       <router-view
+         class="view"
+         keep-alive
+         transition
+         transition-mode="out-in">
+       </router-view>
+    </main>
     <site-navigation>
       <div class="site-navigation__rail">
         <site-navigation-item link="/about" color="green">About</site-navigation-item>
@@ -14,14 +22,6 @@
       </div>
       <site-navigation-item link="/" color="link" home-link="true">Home</site-navigation-item>
     </site-navigation>
-    <main class="content" role="main">
-       <router-view
-         class="view"
-         keep-alive
-         transition
-         transition-mode="out-in">
-       </router-view>
-    </main>
     <site-footer></site-footer>
   </div>
 </template>
