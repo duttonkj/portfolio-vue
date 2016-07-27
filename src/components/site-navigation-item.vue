@@ -1,11 +1,11 @@
 <template>
-  <div class="site-navigation__item" v-bind:class="[
-    'site-navigation__item--' + color,
+  <div class="c-site-navigation-item" v-bind:class="[
+    'c-site-navigation-item--' + color,
     {
-      'site-navigation__item--home': homeLink
+      'c-site-navigation-item--home': homeLink
     }
   ]" >
-    <a v-link="link" class="site-navigation__link"><slot></slot></a>
+    <a v-link="link" class="c-site-navigation-item__link"><slot></slot></a>
   </div>
 </template>
 
@@ -31,8 +31,133 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-a {
-  color: #42b983;
+<style>
+/* ==========================================================================
+  Site Navigation Item
+  ========================================================================== */
+
+/**
+*  Individual Nagivation element
+*/
+
+.c-site-navigation-item {
+  display: block;
+  will-change: transform;
+  // transform: scale(0);
+  transform-origin: 0 50%;
+
+  @media $desktop {
+    width: 12.5vw;
+    height: 33.33vh;
+    font-size: 1rem;
+  }
 }
+
+/* Link nested inside
+   ========================================================================== */
+
+/**
+*
+*/
+
+.c-site-navigation-item__link {
+  width: 100%;
+  height: 100%;
+  padding: $spacingUnit 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 100ms ease-out;
+  will-change: transform;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    transform: scale(1.2) !important;
+  }
+}
+
+
+/* Color Variations
+   ========================================================================== */
+
+/**
+*  Apply a different color to each link based on class name.  Use a darken effect on hover
+*/
+
+$hoverEffect: whiteness(15%);
+
+/* Purple */
+.c-site-navigation-item--purple {
+  & .c-site-navigation-item__link {
+    background-color: $colorPurple;
+
+    &:hover {
+      background-color: color($colorPurple $hoverEffect);
+    }
+  }
+}
+
+/* Red */
+.c-site-navigation-item--red {
+  & .c-site-navigation-item__link {
+    background-color: $colorRed;
+
+    &:hover {
+      background-color: color($colorRed $hoverEffect);
+    }
+  }
+}
+
+/* Ocean */
+.c-site-navigation-item--ocean {
+  & .c-site-navigation-item__link {
+    background-color: $colorOcean;
+
+    &:hover {
+      background-color: color($colorOcean $hoverEffect);
+    }
+  }
+}
+
+/* Green */
+.c-site-navigation-item--green {
+  & .c-site-navigation-item__link {
+    background-color: $colorGreen;
+
+    &:hover {
+      background-color: color($colorGreen $hoverEffect);
+    }
+  }
+}
+
+/* Orange */
+.c-site-navigation-item--orange {
+  & .c-site-navigation-item__link {
+    background-color: $colorOrange;
+
+    &:hover {
+      background-color: color($colorOrange $hoverEffect);
+    }
+  }
+}
+
+/* Blue */
+.c-site-navigation-item--blue {
+  & .c-site-navigation-item__link {
+    background-color: $colorBlue;
+
+    &:hover {
+      background-color: color($colorBlue $hoverEffect);
+    }
+  }
+}
+
+
 </style>

@@ -22,6 +22,8 @@
     "normalize-css": "^2.3.1",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
+    "postcss-inline-media": "0.0.1",
+    "postcss-simple-vars": "^3.0.0",
     "postcss-url": "^5.1.2",
     "socket.io-client": "^1.4.8",
     "svg-inline-loader": "^0.6.1",

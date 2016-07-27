@@ -1,5 +1,5 @@
 <template>
-  <article class="block"><slot></slot></article>
+  <article class="c-block"><slot></slot></article>
 </template>
 
 <script>
@@ -8,7 +8,22 @@ export default {}
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
+/* ==========================================================================
+  Site Navigation Item
+  ========================================================================== */
+
+/**
+*  Individual Nagivation element
+*/
+
+.c-block {
+  padding-bottom: $spacingUnit
 }
+
+/* Link nested inside
+   ========================================================================== */
+
+/**
+*
+*/
 </style>
