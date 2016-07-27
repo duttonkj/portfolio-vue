@@ -84,6 +84,17 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
-    loaders: utils.cssLoaders()
+    loaders: utils.cssLoaders(),
+    postcss: function(webpack) {
+      return [
+        require('postcss-import')({addDependencyTo: webpack}),
+        require("postcss-url")(),
+        require('postcss-cssnext')()
+      ]
+    },
+
+    // disable vue-loader autoprefixing.
+    // this is a good idea since cssnext comes with it too.
+    autoprefixer: false
   }
 }
