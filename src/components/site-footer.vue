@@ -29,8 +29,8 @@ export default {
 */
 
 .c-site-footer {
-  padding-top: calc($spacingUnit * 4);
-  padding-bottom: calc($spacingUnit * 4);
+  padding-top: calc($spacingUnit * 2);
+  padding-bottom: calc($spacingUnit * 2);
   font-size: 0.8rem;
   text-align: center;
   border-top: 1px solid $colorBorderPrimary;

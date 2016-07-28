@@ -1,20 +1,11 @@
 <template>
-  <div class="site-intro">
-        <!-- <div class="site-intro__banner site-intro__banner--top">
-          <h1 class="site-intro__title">Kevin Dutton</h1>
-        </div> -->
+  <div class="c-site-intro">
         <circle-headline></circle-headline>
-        <div class="site-intro__banner site-intro__banner--bottom">
-          <h4 class="site-intro__subtitle">
-          <!-- <div class="site-intro__contact">
-              <a href="#" class="decorate">hello@kevindutton.com</a>
-          </div> -->
-
-          A <a href="#about" class="underlined-word">
-              <span class="underlined-word__attribute js-letter js-underline-word" data-letter-count="10">true full-stack*</span>
-            </a>
-            developer<br/> looking for a <strong>great new opportunity</strong></h2>
-            <p class="site-intro__footnote"><sup>*</sup>Adjectives used by colleagues to describe Kevin</p>
+        <div class="c-site-intro__banner">
+          <h4 class="c-site-intro__subtitle">
+            A <underlined-word :accolade.once="accolades[selectedSlot]"></underlined-word>  developer<br/> looking for a <strong>great new opportunity</strong>
+          </h4>
+            <p class="c-site-intro__footnote"><sup>*</sup>Adjectives used by colleagues to describe Kevin</p>
           </h4>
         </div>
   </div>
@@ -22,17 +13,82 @@
 
 <script>
 import CircleHeadline from './circle-headline'
+import UnderlinedWord from './underlined-word'
 
 export default {
   components: {
-    CircleHeadline
+    CircleHeadline,
+    UnderlinedWord
+  },
+  data () {
+    return {
+      selectedSlot: 0,
+      accolades: [
+        'true full-stack*',
+        'pragmatic*',
+        'dedicated*',
+        'passionate*'
+      ]
+    }
+  },
+  events: {
+    'switch-word': function (msg) {
+      this.switchWord()
+    }
+  },
+  methods: {
+    switchWord () {
+      this.selectedSlot += 1
+      // check for the end of the array
+      if (this.selectedSlot === this.accolades.length) {
+        this.selectedSlot = 0
+      }
+      this.$broadcast('new-word', this.accolades[this.selectedSlot])
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
-  color: #42b983;
+<style>
+/* ==========================================================================
+  Site Navigation
+  ========================================================================== */
+
+/**
+*  Styles main navigation.  Is a normal inline element until desktop, then become fixed and 2 rails split the navigation from left to right
+*/
+
+.c-site-intro {
+  will-change: transform;
+  padding: 0 0 calc($spacingUnit * 4) 0;
+  font-size: 1em;
+}
+
+/* Subtitle
+   ========================================================================== */
+
+/**
+ * Split nav evelenly between left and right edge on desktop and above
+ */
+.c-site-intro__subtitle {
+   font-size: 2.5em;
+   color: #002F2B;
+   margin: calc($spacingUnit / 2) 0;
+   text-align: center;
+   line-height: 1.3;
+ }
+
+
+/* Footnote
+  ========================================================================== */
+
+/**
+* Split nav evelenly between left and right edge on desktop and above
+*/
+.c-site-intro__footnote {
+    display:block;
+    text-align:center;
+    font-size: 0.8em;
+    font-weight: normal;
 }
 </style>

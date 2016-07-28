@@ -9,6 +9,7 @@ module.exports = {
   navWidth: '15vw',
 
   // Colors
+  colorLogo: '#115953',
   colorLink: '#08B2E3',
   colorBase: '#292c36',
   colorBorderPrimary: '#A5BFA8',

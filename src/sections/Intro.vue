@@ -6,6 +6,7 @@
 
 <script>
 import SiteIntro from './../components/site-intro'
+import anime from 'animejs'
 export default {
   data () {
     return {
@@ -13,11 +14,54 @@ export default {
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Intro View!'
+      isAnimating: true,
+      rotateDegrees: 0
     }
   },
   components: {
     SiteIntro
+  },
+  ready () {
+    this.animateCircle()
+  },
+  route: {
+    activate ({ next }) {
+      if (!this.isAnimating) {
+        this.animateCircle()
+      }
+      next()
+    },
+    deactivate () {
+      console.log('REMOVE ANIMATIONS')
+      anime.remove('.c-hobby__icon')
+    }
+  },
+  methods: {
+    animateCircle () {
+      // increment in 180's
+      this.rotateDegrees -= 180
+      console.log('animate circle')
+      console.log(this.rotateDegrees)
+      console.log(anime.easings)
+      let animeDuration = 1200
+      anime({
+        targets: ['.js-circle-headline__svg'],
+        rotate: {
+          value: this.rotateDegrees,
+          duration: animeDuration,
+          easing: 'easeOutSine'
+        },
+        delay: 2000,
+        loop: false,
+        begin: () => {
+          this.$broadcast('switch-word')
+        },
+        complete: () => {
+          this.animateCircle(this.rotateDegrees)
+        }
+        // Lets loop manually to allow random functions to change animation
+      })
+    }
   }
 }
 </script>

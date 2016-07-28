@@ -58,7 +58,7 @@ export default {
   color: #222;
   overflow-x: hidden;
   line-height: $lineHeight;
-  font-family: 'geomanistregular', 'Avenir Next', Helvetica, arial, sans-serif;
+  font-family: -apple-system, 'Avenir Next', Helvetica, arial, sans-serif;
 }
 
 
@@ -74,7 +74,7 @@ export default {
 
 .c-portfolio-wrapper{
   max-width: none;
-
+  min-height: 100vh;
   @media $desktop {
     margin: 0;
     padding-left: calc(($spacingUnit * 4) + $navWidth);
