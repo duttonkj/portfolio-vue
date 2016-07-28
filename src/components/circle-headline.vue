@@ -37,7 +37,7 @@ export default {}
 */
 
 .c-circle-headline {
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
 }
 

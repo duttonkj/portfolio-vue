@@ -33,7 +33,7 @@ export default {
   padding-bottom: calc($spacingUnit * 2);
   font-size: 0.8rem;
   text-align: center;
-  border-top: 1px solid $colorBorderPrimary;
+  border-top: 4px solid $colorBorderPrimary;
 }
 
 

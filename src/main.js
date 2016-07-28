@@ -10,6 +10,12 @@ import App from './App'
 import AuthHook from './routes/hooks/auth'
 import ScrollHook from './routes/hooks/scroll'
 
+// Custom transitions
+import PageTransition from './transitions/page'
+
+// Register transitions with Vue
+Vue.transition('page', PageTransition)
+
 // Init the router component
 Vue.use(VueRouter)
 var router = new VueRouter({

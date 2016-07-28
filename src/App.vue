@@ -5,7 +5,7 @@
        <router-view
          class="view"
          keep-alive
-         transition
+         transition="page"
          transition-mode="out-in">
        </router-view>
     </main>

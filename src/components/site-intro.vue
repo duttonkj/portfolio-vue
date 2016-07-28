@@ -60,7 +60,7 @@ export default {
 
 .c-site-intro {
   will-change: transform;
-  padding: 0 0 calc($spacingUnit * 4) 0;
+  padding: calc($spacingUnit * 4) 0 calc($spacingUnit * 4) 0;
   font-size: 1em;
 }
 
