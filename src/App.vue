@@ -11,9 +11,9 @@
     </main>
     <site-navigation>
       <div class="c-site-navigation__rail">
-        <site-navigation-item link="/about" color="green">About</site-navigation-item>
+        <site-navigation-item link="/about" color="blue">About</site-navigation-item>
         <site-navigation-item link="/work" color="orange">Work</site-navigation-item>
-        <site-navigation-item link="/outside-work" color="blue">Outside of Work</site-navigation-item>
+        <site-navigation-item link="/outside-work" color="green">Outside of Work</site-navigation-item>
       </div>
       <div class="c-site-navigation__rail c-site-navigation__rail--right">
         <site-navigation-item link="/endorsements" color="purple">Endorsements</site-navigation-item>

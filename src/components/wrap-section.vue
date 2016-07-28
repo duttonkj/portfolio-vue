@@ -1,9 +1,9 @@
 <template>
   <div class="c-content c-content--{{color}}"  data-section="{{identifier}}">
     <h4 class="c-content__headline"><span>{{title}}</span></h4>
-    <span class="c-content__wrap">
+    <div class="c-content__wrap">
       <slot></slot>
-    </span>
+    </div>
   </div>
 </template>
 

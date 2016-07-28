@@ -1,6 +1,6 @@
 <template>
   <div class="section-animator">
-    <wrap-section id="about" title="About Kevin" color="green">
+    <wrap-section id="about" title="About Kevin" color="blue">
       <block-base>
         <block-content>
           <block-text hero="true">I am a <span class="highlight">front-end</span> developer with <span class="highlight">15 years</span> of professional experience who builds <span class="highlight">applications</span> and <span class="highlight">interfaces</span> that meet business and design needs.</block-text>

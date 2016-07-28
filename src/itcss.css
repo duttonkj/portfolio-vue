@@ -411,7 +411,7 @@ img[height] {  /* [1] */
   margin:  0; /* [2] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
-  margin-left: -$spacingUnit; /* [3] */
+  margin-left: -10px; /* [5] */
   font-size: 0;
 }
 
@@ -432,7 +432,7 @@ img[height] {  /* [1] */
   display: inline-block; /* [2] */
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
-  padding-left: $spacingUnit; /* [5] */
+  padding-left:10px; /* [5] */
   font-size: 1rem;
 
 }
@@ -704,6 +704,12 @@ img[height] {  /* [1] */
 
 .u-margin-top {
   margin-top: calc($spacingUnit) !important
+}
+
+.u-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
 }
 
 

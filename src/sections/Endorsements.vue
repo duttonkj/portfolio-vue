@@ -3,7 +3,9 @@
     <wrap-section id="endorsements" title="Endorsements" color="purple">
       <block-base v-for="endorsement in endorsements">
         <block-header>
-          <block-title><a href="{{endorsement.url}}" target="_blank">{{endorsement.name}}</a></block-title>
+          <block-title>
+            <href url="{{endorsement.url}}" new-tab="true" decorate="true">{{endorsement.name}}</href>
+          </block-title>
           <block-subtitle>{{endorsement.role}}</block-subtitle>
         </block-header>
         <block-content>

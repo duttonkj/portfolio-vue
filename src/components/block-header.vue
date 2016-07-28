@@ -18,7 +18,7 @@ export default {}
 
 .c-block__header {
   padding: $spacingUnit 0;
-  border-bottom: 4px solid $colorBorderSecondary;
+  border-bottom: 2px solid $colorBorderSecondary;
 }
 
 </style>

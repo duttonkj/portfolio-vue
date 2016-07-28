@@ -57,6 +57,7 @@ export default {
   }
 }
 
+
 /* Link nested inside
    ========================================================================== */
 
@@ -82,10 +83,13 @@ export default {
     color: white;
   }
 
-  &:hover {
+  &:hover,
+  &.v-link-active {
     transform: scale(1.2) !important;
   }
 }
+
+
 
 
 /* Color Variations
@@ -103,7 +107,8 @@ $hoverEffect: whiteness(15%);
   & .c-site-navigation-item__link {
     background-color: $colorPurple;
 
-    &:hover {
+    &:hover,
+    &.v-link-active {
       background-color: color($colorPurple $hoverEffect);
     }
   }
@@ -114,7 +119,8 @@ $hoverEffect: whiteness(15%);
   & .c-site-navigation-item__link {
     background-color: $colorRed;
 
-    &:hover {
+    &:hover,
+    &.v-link-active {
       background-color: color($colorRed $hoverEffect);
     }
   }
@@ -125,7 +131,8 @@ $hoverEffect: whiteness(15%);
   & .c-site-navigation-item__link {
     background-color: $colorOcean;
 
-    &:hover {
+    &:hover,
+    &.v-link-active {
       background-color: color($colorOcean $hoverEffect);
     }
   }
@@ -136,7 +143,8 @@ $hoverEffect: whiteness(15%);
   & .c-site-navigation-item__link {
     background-color: $colorGreen;
 
-    &:hover {
+    &:hover,
+    &.v-link-active{
       background-color: color($colorGreen $hoverEffect);
     }
   }
@@ -147,7 +155,8 @@ $hoverEffect: whiteness(15%);
   & .c-site-navigation-item__link {
     background-color: $colorOrange;
 
-    &:hover {
+    &:hover,
+    &.v-link-active {
       background-color: color($colorOrange $hoverEffect);
     }
   }
@@ -158,7 +167,8 @@ $hoverEffect: whiteness(15%);
   & .c-site-navigation-item__link {
     background-color: $colorBlue;
 
-    &:hover {
+    &:hover,
+    &.v-link-active {
       background-color: color($colorBlue $hoverEffect);
     }
   }
