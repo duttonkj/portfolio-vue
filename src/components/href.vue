@@ -1,10 +1,10 @@
 <template>
-  <a class="c-link" :class="{'c-link--decorate': decorate}" :href="url ? url : null" :target="newTab ? '_blank' : null"><slot></slot></a>
+  <a :class="[extraClass,'c-link', {'c-link--decorate': decorate}]" :href="url ? url : null" :target="newTab ? '_blank' : null"><slot></slot></a>
 </template>
 
 <script>
 export default {
-  props: ['decorate', 'url', 'newTab']
+  props: ['decorate', 'url', 'newTab', 'extraClass']
 }
 </script>
 

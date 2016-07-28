@@ -1,24 +1,54 @@
 <template>
-  <footer class="site-footer">
+  <footer class="c-site-footer">
     <address>
-      <a href="mailto:hello@kevindutton.com">hello@kevindutton.com</a>
-      <a href="mailto:hello@kevindutton.com">Github</a>
-      <a href="mailto:hello@kevindutton.com">LinkedIn</a>
-      <a href="mailto:hello@kevindutton.com">Facebook</a>
-      <a href="mailto:hello@kevindutton.com">Twitter</a>
+      <href url="mailto:hello@kevindutton.com" decorate="true" extra-class="c-site-footer__link">hello@kevindutton.com</href>
+      <href url="mailto:hello@kevindutton.com" decorate="true" extra-class="c-site-footer__link">Github</href>
+      <href url="mailto:hello@kevindutton.com" decorate="true" extra-class="c-site-footer__link">LinkedIn</href>
+      <href url="mailto:hello@kevindutton.com" decorate="true" extra-class="c-site-footer__link">Facebook</href>
+      <href url="mailto:hello@kevindutton.com" decorate="true" extra-class="c-site-footer__link">Twitter</href>
    </address>
   </footer>
 </template>
 
 <script>
+import BlocksMixin from './../mixins/blocks'
+
 export default {
+  mixins: [BlocksMixin],
   components: {}
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
-  color: #42b983;
+<style >
+/* ==========================================================================
+  Site Footer
+  ========================================================================== */
+
+/**
+*  simple footer. lets just display links inline
+*/
+
+.c-site-footer {
+  padding-top: calc($spacingUnit * 4);
+  padding-bottom: calc($spacingUnit * 4);
+  font-size: 0.8rem;
+  text-align: center;
+  border-top: 1px solid $colorBorderPrimary;
+}
+
+
+
+/* footer link
+   ========================================================================== */
+
+/**
+*
+*/
+
+.c-site-footer__link{
+  margin-right: $spacingUnit;
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 </style>

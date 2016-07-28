@@ -61,7 +61,7 @@ export default {
     HobbyItem
   },
   beforeDestroy () {
-    anime.remove('.c-hobby__icon')
+    // anime.remove('.c-hobby__icon')
   },
   route: {
     activate ({ next }) {
@@ -139,10 +139,10 @@ export default {
       let animeDuration = 600
       anime({
         targets: ['.js-svg--canoe'],
-        translateY: {
-          value: ['0.5rem', '-0.5rem'],
-          duration: animeDuration
-        },
+        // translateY: {
+        //   value: ['0.5rem', '-0.5rem'],
+        //   duration: animeDuration
+        // },
         rotate: {
           value: -2,
           duration: animeDuration

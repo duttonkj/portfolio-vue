@@ -82,9 +82,6 @@ export default {
     margin-top: -35%;
     width: 70%;*/
     will-change: transform;
-
-    // move off screen for aniatmios to prevent hopping
-    transform: translateX(-250%);
     height: auto;
     & path {
       fill: #607466;

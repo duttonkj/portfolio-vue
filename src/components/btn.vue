@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* ==========================================================================
   Block Text
   ========================================================================== */
@@ -28,6 +28,7 @@ export default {
   padding: calc($spacingUnit * 0.5) calc($spacingUnit * 2);
   transition: all 100ms ease;
   background-color: $colorLink;
+  border: 0;
   text-decoration: none;
   color: white;
   font-size: 0.8em;
