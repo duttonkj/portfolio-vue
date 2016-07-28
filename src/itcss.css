@@ -333,8 +333,8 @@ img[height] {  /* [1] */
 
 .o-wrapper {
  @include inuit-clearfix();
- padding-right: var(--globalSpacingUnit);
- padding-left:  var(--globalSpacingUnit);
+ padding-right: $spacingUnit;
+ padding-left:  $spacingUnit;
  margin-right: auto;
  margin-left:  auto;
  max-width: 1200px;
@@ -411,7 +411,7 @@ img[height] {  /* [1] */
   margin:  0; /* [2] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
-  margin-left: -var(--globalSpacingUnit); /* [3] */
+  margin-left: -$spacingUnit; /* [3] */
   font-size: 0;
 }
 
@@ -432,7 +432,7 @@ img[height] {  /* [1] */
   display: inline-block; /* [2] */
   vertical-align: top; /* [3] */
   width: 100%; /* [4] */
-  padding-left: var(--globalSpacingUnit); /* [5] */
+  padding-left: $spacingUnit; /* [5] */
   font-size: 1rem;
 
 }
@@ -665,6 +665,46 @@ img[height] {  /* [1] */
 /* *******************************************************
    Utilities
    ******************************************************/
+
+
+/* ==========================================================================
+ Widths
+ ========================================================================== */
+
+.u-1-2 {
+  width: 100% !important;
+  @media $tablet {
+    width: 50% !important;
+  }
+}
+.u-1-4 {
+  width: 100% !important;
+  @media $tablet {
+    width: 25% !important;
+  }
+}
+
+
+
+/**
+* Attach our clearfix mixin to a utility class.
+*/
+
+.u-margin-top {
+ margin-top: calc($spacingUnit) !important
+}
+
+/* ==========================================================================
+  Spacing
+  ========================================================================== */
+
+/**
+* Attach our clearfix mixin to a utility class.
+*/
+
+.u-margin-top {
+  margin-top: calc($spacingUnit) !important
+}
 
 
 /* ==========================================================================

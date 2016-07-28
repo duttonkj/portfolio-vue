@@ -20,11 +20,13 @@ export default {}
 .c-site-navigation {
   @media $desktop {
     width: 100vw;
-    height: 100vw;
+    height: 0;
+    overflow: visible;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
+
   }
 }
 
@@ -37,6 +39,9 @@ export default {}
 .c-site-navigation__rail {
   position: relative;
   z-index: 5000;
+  @media $desktop {
+    width: $navWidth;
+  }
 }
 
 .c-site-navigation__rail--right {

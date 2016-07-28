@@ -47,9 +47,13 @@ export default {
   transform-origin: 0 50%;
 
   @media $desktop {
-    width: 12.5vw;
+    width: $navWidth;
     height: 33.33vh;
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media $wide {
+    font-size: 1.2rem;
   }
 }
 
@@ -68,7 +72,7 @@ export default {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 100ms ease-out;
@@ -88,7 +92,8 @@ export default {
    ========================================================================== */
 
 /**
-*  Apply a different color to each link based on class name.  Use a darken effect on hover
+*  Apply a different color to each link based on class name.  Use a darken effect on hover. I would typically use a SASS function to output these
+*  but have not dug one up yet for postcss
 */
 
 $hoverEffect: whiteness(15%);

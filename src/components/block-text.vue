@@ -1,5 +1,5 @@
 <template>
-  <p class="block__text" v-bind:class="{ 'block__text--hero': hero }"><slot></slot></p>
+  <p class="c-block__text" v-bind:class="{ 'c-block__text--hero': hero }"><slot></slot></p>
 </template>
 
 <script>
@@ -8,9 +8,27 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
+/* ==========================================================================
+  Block Text
+  ========================================================================== */
+
+/**
+*  Typeset for content
+*/
+
+.c-block__text {
+  margin: 0 0 calc($spacingUnit / 2) 0;
+  line-height: $lineHeight;
+  font-size: 0.9em;
 }
+
+
+/* Larger hero version
+   ========================================================================== */
+
+.c-block__text--hero {
+  font-size: 1.6em
+}
+
 </style>

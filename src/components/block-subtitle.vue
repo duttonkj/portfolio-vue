@@ -1,14 +1,25 @@
 <template>
-  <p class="block__sub-title"><slot></slot></p>
+  <p class="c-block__sub-title"><slot></slot></p>
 </template>
 
 <script>
 export default {}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
-  color: #42b983;
+<style >
+/* ==========================================================================
+  Block Title
+  ========================================================================== */
+
+/**
+*  Large heading
+*/
+
+.c-block__sub-title {
+  font-size: 1em;
+  margin: 0 0 0em 0;
+  color: #34403A;
+  line-height: 1.2;
+  padding-top: calc($spacingUnit / 2);
 }
 </style>

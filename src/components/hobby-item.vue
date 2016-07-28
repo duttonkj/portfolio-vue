@@ -1,14 +1,14 @@
 <template>
-  <div class="hobby"
-    v-bind:class="[
-    {
-      'hobby--hero': isHero,
-      'col-1-2': isHero,
-      'col-1-4': !isHero
-    }
-  ]" >
-    <slot></slot>
-    <span class="hobby__activity-title">{{title}}</span>
+  <div class="o-layout__item" :class="{'u-1-2':isHero,'u-1-4': !isHero}">
+    <div class="c-hobby"
+      v-bind:class="[
+      {
+        'hobby--hero': isHero
+      }
+    ]" >
+      <slot></slot>
+      <span class="hobby__activity-title">{{title}}</span>
+    </div>
   </div>
 </template>
 
@@ -21,9 +21,23 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-a {
-  color: #42b983;
+<style>
+/* ==========================================================================
+  Hobby item
+  ========================================================================== */
+
+/**
+*  Object that contains SVG and text
+*/
+
+.c-hobby {
+
 }
+
+/* Rails
+   ========================================================================== */
+
+/**
+ * Split nav evelenly between left and right edge on desktop and above
+ */
 </style>

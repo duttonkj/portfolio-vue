@@ -1,17 +1,19 @@
 <template>
   <div class="section-animator">
-    <wrap-section id="outside-work" title="Interests Outside of Work" color="red">
+    <wrap-section id="outside-work" title="Interests Outside of Work" color="blue">
       <block-base>
         <block-content>
           <block-text hero="true">
             I believe time away from the screen is important and beneficial. I attempt to find a balance by taking my family on outdoor excursions:
           </block-text>
-          <hobby-item activity="Mountain Biking" is-hero="true">{{{svg.mountainBike}}}</hobby-item>
-          <hobby-item activity="Skiing" is-hero="true">{{{svg.mountainBike}}}</hobby-item>
-          <hobby-item activity="Canoeing">{{{svg.canoeing}}}</hobby-item>
-          <hobby-item activity="Camping">{{{svg.camping}}}</hobby-item>
-          <hobby-item activity="Hiking">{{{svg.hiking}}}</hobby-item>
-          <hobby-item activity="Soccer">{{{svg.soccer}}}</hobby-item>
+          <div class="o-layout">
+            <hobby-item activity="Mountain Biking" is-hero="true">{{{svg.mountainBike}}}</hobby-item>
+            <hobby-item activity="Skiing" is-hero="true">{{{svg.skiing}}}</hobby-item>
+            <hobby-item activity="Canoeing">{{{svg.canoeing}}}</hobby-item>
+            <hobby-item activity="Camping">{{{svg.camping}}}</hobby-item>
+            <hobby-item activity="Hiking">{{{svg.hiking}}}</hobby-item>
+            <hobby-item activity="Soccer">{{{svg.soccer}}}</hobby-item>
+            </div>
         </block-content>
       </block-base>
     </wrap-section>

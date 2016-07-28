@@ -5,7 +5,8 @@ module.exports = {
   lineHeight: '1.4',
   radius: '3px',
   transition: '(1/3) + s',
-  spacingUnit: '1.4rem',
+  spacingUnit: '1.5em',
+  navWidth: '15vw',
 
   // Colors
   colorLink: '#08B2E3',

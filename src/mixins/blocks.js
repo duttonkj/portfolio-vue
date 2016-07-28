@@ -4,6 +4,8 @@ import BlockText from './../components/block-text'
 import BlockHeader from './../components/block-header'
 import BlockTitle from './../components/block-title'
 import BlockSubtitle from './../components/block-subtitle'
+import Btn from './../components/btn'
+import Href from './../components/href'
 
 export default {
   components: {
@@ -12,6 +14,8 @@ export default {
     BlockText,
     BlockHeader,
     BlockTitle,
-    BlockSubtitle
+    BlockSubtitle,
+    Btn,
+    Href
   }
 }

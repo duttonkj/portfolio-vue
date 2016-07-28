@@ -1,7 +1,7 @@
 <template>
-  <header class="site-header">
-    <h1 class="site-header__title">Kevin Dutton</h1>
-    <p class="site-header__meta">Columbus, OH</p>
+  <header class="c-site-header">
+    <h1 class="c-site-header__title">Kevin Dutton</h1>
+    <p class="c-site-header__meta">Columbus, OH</p>
   </header>
 </template>
 
@@ -13,7 +13,47 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
+
+/* ==========================================================================
+  Site Header
+  ========================================================================== */
+
+/**
+*  basic header, but palying with a special display on the intro page only
+*/
+
+.c-site-header {
+  padding-top: calc($spacingUnit * 2);
+  padding-bottom: calc($spacingUnit * 2);
+  font-size: 1rem;
+  text-align: center;
 }
+
+/* Header title
+   ========================================================================== */
+
+/**
+*
+*/
+
+.c-site-header__title {
+  display: inline-block;
+  margin: 0 auto;
+  padding: calc($spacingUnit * 0.1) calc($spacingUnit / 2);
+  color: #115953;
+  border-bottom: 2px solid #115953;
+  font-size: 2em;
+}
+
+/* Header title
+   ========================================================================== */
+
+/**
+*
+*/
+
+.c-site-header__meta {
+  font-size: 0.8em;
+}
+
 </style>

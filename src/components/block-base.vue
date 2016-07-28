@@ -9,7 +9,7 @@ export default {}
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* ==========================================================================
-  Site Navigation Item
+  Block Wrapper
   ========================================================================== */
 
 /**
@@ -17,13 +17,18 @@ export default {}
 */
 
 .c-block {
-  padding-bottom: $spacingUnit
+  padding-bottom: calc($spacingUnit * 2);
+  font-size: 1rem;
+  &:lst-of-type {
+    padding-bottom: 0;
+  }
+  @media $desktop {
+    font-size: 1.5rem;
+  }
+
+    @media $wide {
+      font-size: 1.8rem;
+    }
 }
 
-/* Link nested inside
-   ========================================================================== */
-
-/**
-*
-*/
 </style>

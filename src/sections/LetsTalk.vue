@@ -4,10 +4,10 @@
       <block-base>
         <block-content>
           <block-text hero="true">
-            <a class="decorate" href="tel:+6142664669">614-266-4669</a>
+            <href url="tel:+6142664669" decorate="true">614-266-4669</href>
           </block-text>
           <block-text hero="true">
-            <a class="decorate" href="mailto:hello@kevindutton.com">hello@kevindutton.com</a>
+            <href url="mailto:hello@kevindutton.com" decorate="true">hello@kevindutton.com</href>
           </block-text>
         </block-content>
       </block-base>
@@ -32,6 +32,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 
 </style>

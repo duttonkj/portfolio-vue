@@ -1,5 +1,5 @@
 <template>
-  <header class="block__header"><slot></slot></header>
+  <header class="c-block__header"><slot></slot></header>
 </template>
 
 <script>
@@ -8,7 +8,17 @@ export default {}
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
+/* ==========================================================================
+  Block header
+  ========================================================================== */
+
+/**
+*  Wrapping for block header component. Provide spacing and decorations
+*/
+
+.c-block__header {
+  padding: $spacingUnit 0;
+  border-bottom: 4px solid $colorBorderSecondary;
 }
+
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="o-wrapper">
+  <div id="app" class="o-wrapper c-portfolio-wrapper">
     <site-header></site-header>
-    <main class="content" role="main">
+    <main class="c-content-wrapper" role="main">
        <router-view
          class="view"
          keep-alive
@@ -56,9 +56,57 @@ export default {
 .c-portfolio{
   background-color: #f4fff5;
   color: #222;
-  @apply --geomanistRegular;
-  overflow-x: hidden
+  overflow-x: hidden;
+  line-height: $lineHeight;
+  font-family: 'geomanistregular', 'Avenir Next', Helvetica, arial, sans-serif;
 }
+
+
+
+
+/* ==========================================================================
+  Portfolio wrapper
+  ========================================================================== */
+
+/**
+* Custom styling/override for the o-wrapper viewpoert.  padding provides room for the side navs as well as a nice gutter for the content
+*/
+
+.c-portfolio-wrapper{
+  max-width: none;
+
+  @media $desktop {
+    margin: 0;
+    padding-left: calc(($spacingUnit * 4) + $navWidth);
+    padding-right: calc(($spacingUnit * 4) + $navWidth);
+  }
+
+  @media $wide {
+    padding-left: calc(($spacingUnit * 6) + $navWidth);
+    padding-right: calc(($spacingUnit * 6) + $navWidth);
+  }
+
+  @media $xWide {
+    padding-left: calc(($spacingUnit * 8) + $navWidth);
+    padding-right: calc(($spacingUnit * 8) + $navWidth);
+  }
+}
+
+
+
+/* ==========================================================================
+  Content wrapper
+  ========================================================================== */
+
+/**
+* Set a max width for large viewports
+*/
+
+.c-content-wrapper{
+  max-width: 1100px;
+}
+
+
 
 
 </style>

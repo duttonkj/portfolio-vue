@@ -1,6 +1,5 @@
 <template>
-  <div class="sub-section-animator">
-    <h1>Work List Will go here</h1>
+  <div class="c-work-list c-sub-section-animator">
     <block-base v-for="project in projects">
       <block-header>
         <block-title>{{project.name}}</block-title>
@@ -9,7 +8,7 @@
       <block-content>
         <block-text>{{{project.description}}}</block-text>
       </block-content>
-      <a class="btn btn--action" href="{{project.url}}" target="_blank">View</a>
+      <btn url="project.url" new-tab="true">View</btn>
       <img :src="project.images[0]" />
     </block-base>
   </div>

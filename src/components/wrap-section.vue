@@ -1,8 +1,7 @@
 <template>
-  <div class="grid-item grid-item--color-{{color}} match"  data-section="{{identifier}}">
-    <h4 class="grid-item__headline"><span>{{title}}</span></h4>
-    <span class="grid-item__wrap">
-      <h2>{{msg}}</h2>
+  <div class="c-content c-content--{{color}}"  data-section="{{identifier}}">
+    <h4 class="c-content__headline"><span>{{title}}</span></h4>
+    <span class="c-content__wrap">
       <slot></slot>
     </span>
   </div>
@@ -17,9 +16,99 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
+
+/* ==========================================================================
+  Content
+  ========================================================================== */
+
+/**
+*  Style top level content. Vertical padding and headlines
+*/
+
+.c-content {
+  padding-top: calc($spacingUnit * 2);
+  padding-bottom: calc($spacingUnit *2);
+  font-size: 1rem;
+  @media $desktop {
+    font-size: 1.2rem;
+  }
+  @media $wide {
+    font-size: 1.4rem;
+  }
 }
+
+
+
+/* Content Headline
+   ========================================================================== */
+
+/**
+* Main Page title, match color of nav section
+*/
+
+.c-content__headline {
+  display: inline-block;
+  padding: calc($spacingUnit * 0.5) calc($spacingUnit);
+  margin-bottom: calc($spacingUnit * 1);
+  border-bottom: 2px solid $colorBase;
+  text-transform: uppercase;
+  color: $colorBase;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: normal;
+
+
+  /* Color Variations
+     ========================================================================== */
+
+  /**
+  *  Apply a different color to each link based on class name.  Use a darken effect on hover. I would typically use a SASS function to output these
+  *  but have not dug one up yet for postcss. Going to try the nesting method this time due to the simpler requirement
+  */
+
+  /* Purple */
+  @nest .c-content--purple & {
+      border-color: $colorPurple;
+      color: $colorPurple;
+  }
+
+  /* Green */
+  @nest .c-content--green & {
+      border-color: $colorGreen;
+      color: $colorGreen;
+  }
+
+  /* Blue */
+  @nest .c-content--blue & {
+      border-color: $colorBlue;
+      color: $colorBlue
+  }
+
+  /* Orange */
+  @nest .c-content--orange & {
+      border-color: $colorOrange;
+      color: $colorOrange;
+  }
+
+  /* Red */
+  @nest .c-content--red & {
+      border-color: $colorRed;
+      color: $colorRed;
+  }
+
+  /* Ocean */
+  @nest .c-content--ocean & {
+      border-color: $colorOcean;
+      color: $colorOcean;
+  }
+
+}
+
+
+
+
+
+
+
 </style>
