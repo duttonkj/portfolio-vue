@@ -1,7 +1,7 @@
 {
   "name": "portfolio-vue",
   "version": "1.0.0",
-  "description": "Portfolio rewrite using Vue.js",
+  "description": "Portfolio rewrite using Vue.js and postcss",
   "author": "Kevin Dutton <hello@kevindutton.com>",
   "private": true,
   "scripts": {
