@@ -25,8 +25,14 @@ export default {
 .c-site-header {
   //padding-top: calc($spacingUnit * 0.5);
   padding-bottom: calc($spacingUnit * 0.5);
-  font-size: 1rem;
+  font-size: 0.6rem;
   text-align: center;
+  @media $desktop {
+    font-size: 1rem;
+  }
+  @media $xWide {
+    font-size: 1.4rem;
+  }
 }
 
 /* Header title

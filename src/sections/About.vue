@@ -20,11 +20,12 @@
           <block-title>This site</block-title>
         </block-header>
         <block-content>
-          <block-text>The base for this site was cloned from Google's <a class="decorate" href="https://developers.google.com/web/tools/starter-kit/?hl=en" target="_blank">Web Starter Kit</a>.  I removed the material design css framework and replaced it with <a  class="decorate" href="https://github.com/sass-mq/sass-mq" target="_blank">SassMQ</a> for bare bones breakpoint managment.</block-text>
+          <block-text>Please see the <href url="https://github.com/duttonkj/portfolio-vue" decorat="true">readme</href> on the repository for site information</block-text>
+          <block-text><strike>The base for this site was cloned from Google's <a class="decorate" href="https://developers.google.com/web/tools/starter-kit/?hl=en" target="_blank">Web Starter Kit</a>.  I removed the material design css framework and replaced it with <a  class="decorate" href="https://github.com/sass-mq/sass-mq" target="_blank">SassMQ</a> for breakpoint managment.</strike></block-text>
           <block-text>I experimented with <a  class="decorate"  href="http://anime-js.com/" target="_blank">anime.js</a> on many of the animations and transitions. </block-text>
           <block-text>Project data is stored in an API built with <a class="decorate" href="http://feathersjs.com/" target="_blank">Feathers.js</a> and connected to via websockets.</block-text>
           <block-text>// TODO: Optimize based on PageSpeed results</block-text>
-          <block-text>// TODO: Rebuild with <a class="decorate" href="https://vuejs.org/" target="_blank">Vue.js</a></block-text>
+          <block-text><strike>// TODO: Rebuild with <a class="decorate" href="https://vuejs.org/" target="_blank">Vue.js</a></strike> (Done!)</block-text>
         </block-content>
       </block-base>
     </wrap-section>

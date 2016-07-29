@@ -37,8 +37,19 @@ export default {}
 */
 
 .c-circle-headline {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
+  font-size: 1rem;
+  @media $tablet {
+    width: 60%;
+  }
+  @media $desktop {
+    width: 65%;
+  }
+  @media $xWide {
+    width: 60%;
+    font-size: 2rem;
+  }
 }
 
 
@@ -55,6 +66,7 @@ export default {}
    width: 100%;
    padding-bottom: 90%;
    height: 0;
+   margin-bottom: calc($spacingUnit)
 }
 
 

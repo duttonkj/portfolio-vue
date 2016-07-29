@@ -29,7 +29,10 @@ export default {
 .c-content {
   padding-top: calc($spacingUnit * 2);
   padding-bottom: calc($spacingUnit *2);
-  font-size: 1rem;
+  font-size: 0.8rem;
+  @media $tablet {
+    font-size: 1rem;
+  }
   @media $desktop {
     font-size: 1.2rem;
   }
@@ -50,13 +53,18 @@ export default {
 .c-content__headline {
   display: inline-block;
   padding: calc($spacingUnit * 0.5) calc($spacingUnit);
-  margin-bottom: calc($spacingUnit * 1);
   border-bottom: 2px solid $colorBase;
   text-transform: uppercase;
   color: $colorBase;
   font-size: 1em;
   line-height: 1;
   font-weight: normal;
+
+  @media $desktop {
+    margin-bottom: calc($spacingUnit * 1);
+  }
+
+  overflow: hidden;
 
 
   /* Color Variations

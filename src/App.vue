@@ -75,6 +75,13 @@ export default {
 .c-portfolio-wrapper{
   max-width: none;
   min-height: 100vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media $tablet {
+    margin: 0;
+    padding-left: calc(($spacingUnit * 2));
+    padding-right: calc(($spacingUnit * 2));
+  }
   @media $desktop {
     margin: 0;
     padding-left: calc(($spacingUnit * 4) + $navWidth);
@@ -87,8 +94,8 @@ export default {
   }
 
   @media $xWide {
-    padding-left: calc(($spacingUnit * 8) + $navWidth);
-    padding-right: calc(($spacingUnit * 8) + $navWidth);
+    padding-left: calc(($spacingUnit * 10) + $navWidth);
+    padding-right: calc(($spacingUnit * 10) + $navWidth);
   }
 }
 

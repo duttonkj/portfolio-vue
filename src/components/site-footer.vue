@@ -31,9 +31,12 @@ export default {
 .c-site-footer {
   padding-top: calc($spacingUnit * 0.5);
   padding-bottom: calc($spacingUnit * 0.5);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: center;
   //border-bottom: 1px solid $colorBorderPrimary;
+  @media $desktop {
+    font-size: 0.8rem;
+  }
 }
 
 

@@ -86,8 +86,11 @@ export default {
 */
 
 .c-input-group {
-  font-size: 1rem;
-  margin-top: calc($spacingUnit * 2)
+  font-size: 0.5rem;
+  margin-top: calc($spacingUnit * 2);
+  @media $desktop {
+    font-size: 1rem;
+  }
 }
 
 

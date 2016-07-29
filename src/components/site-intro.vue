@@ -60,8 +60,17 @@ export default {
 
 .c-site-intro {
   will-change: transform;
-  padding: calc($spacingUnit * 4) 0 calc($spacingUnit * 4) 0;
-  font-size: 1em;
+  padding: calc($spacingUnit * 2) 0 calc($spacingUnit * 2) 0;
+  font-size: 0.35rem;
+  @media $tablet {
+    font-size: 0.6rem;
+  }
+  @media $wide {
+    font-size: 0.8rem;
+  }
+  @media $xWide {
+    //font-size: 1.2rem;
+  }
 }
 
 /* Subtitle
