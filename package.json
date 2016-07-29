@@ -26,6 +26,7 @@
     "postcss-inline-media": "0.0.1",
     "postcss-simple-vars": "^3.0.0",
     "postcss-url": "^5.1.2",
+    "postcss-utilities": "^0.2.1",
     "socket.io-client": "^1.4.8",
     "svg-inline-loader": "^0.6.1",
     "vue": "^1.0.21",
