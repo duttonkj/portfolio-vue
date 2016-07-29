@@ -1,9 +1,10 @@
 <template>
   <div id="app" class="o-wrapper c-portfolio-wrapper">
+    <site-footer></site-footer>
     <site-header></site-header>
     <main class="c-content-wrapper" role="main">
        <router-view
-         class="view"
+         class="c-page-transition"
          keep-alive
          transition="page"
          transition-mode="out-in">
@@ -22,7 +23,6 @@
       </div>
       <site-navigation-item link="/" color="link" home-link="true">Home</site-navigation-item>
     </site-navigation>
-    <site-footer></site-footer>
   </div>
 </template>
 
@@ -31,7 +31,6 @@ import SiteHeader from './components/site-header'
 import SiteNavigation from './components/site-navigation'
 import SiteNavigationItem from './components/site-navigation-item'
 import SiteFooter from './components/site-footer'
-
 export default {
   components: {
     SiteHeader,
@@ -44,15 +43,12 @@ export default {
 
 <style src="./itcss.css"></style>
 <style>
-
 /* ==========================================================================
   Portfoilo
   ========================================================================== */
-
 /**
 * App level component.  Set Colors and Styles to to body
 */
-
 .c-portfolio{
   background-color: #f4fff5;
   color: #222;
@@ -60,53 +56,53 @@ export default {
   line-height: $lineHeight;
   font-family: -apple-system, 'Avenir Next', Helvetica, arial, sans-serif;
 }
-
-
-
-
 /* ==========================================================================
   Portfolio wrapper
   ========================================================================== */
-
 /**
 * Custom styling/override for the o-wrapper viewpoert.  padding provides room for the side navs as well as a nice gutter for the content
 */
-
 .c-portfolio-wrapper{
   max-width: none;
   min-height: 100vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media $tablet {
+    margin: 0;
+    padding-left: calc(($spacingUnit * 2));
+    padding-right: calc(($spacingUnit * 2));
+  }
   @media $desktop {
     margin: 0;
     padding-left: calc(($spacingUnit * 4) + $navWidth);
     padding-right: calc(($spacingUnit * 4) + $navWidth);
   }
-
   @media $wide {
     padding-left: calc(($spacingUnit * 6) + $navWidth);
     padding-right: calc(($spacingUnit * 6) + $navWidth);
   }
-
   @media $xWide {
-    padding-left: calc(($spacingUnit * 8) + $navWidth);
-    padding-right: calc(($spacingUnit * 8) + $navWidth);
+    padding-left: calc(($spacingUnit * 10) + $navWidth);
+    padding-right: calc(($spacingUnit * 10) + $navWidth);
   }
 }
-
-
-
 /* ==========================================================================
   Content wrapper
   ========================================================================== */
-
 /**
 * Set a max width for large viewports
 */
-
 .c-content-wrapper{
-  max-width: 1100px;
+  //max-width: 1100px;
 }
-
-
-
-
+/* ==========================================================================
+  Page transtion component to help transitions
+  ========================================================================== */
+/**
+* Keep stuff offscreen to prevent flash before js binds
+*/
+.c-page-transition{
+  will-change: transform;
+  transform: translateX(-200%);
+}
 </style>
