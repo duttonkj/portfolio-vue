@@ -11,7 +11,7 @@ import AuthHook from './routes/hooks/auth'
 import ScrollHook from './routes/hooks/scroll'
 
 // Custom transitions
-import PageTransition from './transitions/page'
+import PageTransition from './transitions/page/'
 
 // Register transitions with Vue
 Vue.transition('page', PageTransition)

@@ -3,7 +3,7 @@
     <site-header></site-header>
     <main class="c-content-wrapper" role="main">
        <router-view
-         class="view"
+         class="c-page-transition"
          keep-alive
          transition="page"
          transition-mode="out-in">
@@ -107,6 +107,19 @@ export default {
 }
 
 
+
+/* ==========================================================================
+  Page transtion component to help transitions
+  ========================================================================== */
+
+/**
+* Keep stuff offscreen to prevent flash before js binds
+*/
+
+.c-page-transition{
+  will-change: transform;
+  transform: translateX(-200%);
+}
 
 
 </style>

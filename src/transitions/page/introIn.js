@@ -1,4 +1,4 @@
-import animeBase from './base'
+import animeHelper from './../anime-helper/'
 
 // Main animation paramters
 var animation = {
@@ -24,7 +24,4 @@ var animation = {
   loop: false
 }
 
-export default function (target, callback) {
-  // Process and run animation
-  return animeBase(animation, target, callback)
-}
+export default animeHelper(animation)

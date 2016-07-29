@@ -1,4 +1,4 @@
-import animeBase from './base'
+import animeHelper from './../anime-helper/'
 
 var direction = {
   fromLeft: {
@@ -30,4 +30,4 @@ var animation = {
   loop: false
 }
 
-export default animeBase(animation)
+export default animeHelper(animation)

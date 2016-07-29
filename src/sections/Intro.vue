@@ -1,5 +1,5 @@
 <template>
-  <div class="section-animator">
+  <div class="section-animator" data-page="intro">
     <site-intro></site-intro>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
     },
     deactivate () {
       console.log('REMOVE ANIMATIONS')
-      anime.remove('.c-hobby__icon')
+      anime.remove('.js-circle-headline__svg')
     }
   },
   methods: {

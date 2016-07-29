@@ -1,6 +1,6 @@
 <template>
   <header class="c-site-header">
-    <h1 class="c-site-header__title">Kevin Dutton</h1>
+    <h1 class="c-site-header__title"><a v-link="{name:'intro'}" class="c-site-header__link">Kevin Dutton</a></h1>
     <!-- <p class="c-site-header__meta">Columbus, OH</p> -->
   </header>
 </template>
@@ -57,6 +57,19 @@ export default {
 
 .c-site-header__meta {
   font-size: 0.8em;
+}
+
+
+/* Header link
+   ========================================================================== */
+
+/**
+* Provide a link home.  Hide it in the logo, remove all link styling
+*/
+
+.c-site-header__link {
+  color: $colorLogo;
+  text-decoration: none;
 }
 
 </style>
