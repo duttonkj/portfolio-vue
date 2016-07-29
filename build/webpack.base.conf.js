@@ -2,7 +2,6 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var vars   = require('postcss-simple-vars')
 
 
@@ -105,8 +104,5 @@ module.exports = {
     // disable vue-loader autoprefixing.
     // this is a good idea since cssnext comes with it too.
     autoprefixer: false
-  },
-  plugins: [
-    new ExtractTextPlugin("style.css")
-  ]
+  }
 }
