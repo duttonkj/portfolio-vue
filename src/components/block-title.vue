@@ -17,6 +17,7 @@ export default {}
 
 .c-block__title {
   font-size: 2em;
+  font-family: $geomanistBlack;
   margin: 0 0 0em 0;
   color: #34403A;
   line-height: 1;

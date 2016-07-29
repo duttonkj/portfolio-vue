@@ -81,10 +81,11 @@ export default {
  */
 .c-site-intro__subtitle {
    font-size: 2.5em;
+   font-family: $geomanistBlack;
    color: #002F2B;
    margin: calc($spacingUnit / 2) 0;
    text-align: center;
-   line-height: 1.3;
+   line-height: 1.4;
  }
 
 
@@ -97,7 +98,7 @@ export default {
 .c-site-intro__footnote {
     display:block;
     text-align:center;
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: normal;
 }
 </style>

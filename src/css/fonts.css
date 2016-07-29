@@ -1,0 +1,29 @@
+
+/* Geomanist Regular */
+@font-face {
+  font-family: 'geomanistregular';
+  src: url('./../assets/fonts/geomanist-regular-webfont.woff2') format('woff2'),
+       url('./../assets/fonts/geomanist-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Geomanist Black */
+@font-face {
+  font-family: 'geomanistblack';
+  src: url('./../assets/fonts/geomanist-black-webfont.woff2') format('woff2'),
+       url('./../assets/fonts/geomanist-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Geomanist Ultra */
+@font-face {
+  font-family: 'geomanistultra';
+  src: url('./../assets/fonts/geomanist-ultra-webfont.woff2') format('woff2'),
+       url('./../assets/fonts/geomanist-ultra-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

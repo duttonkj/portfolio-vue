@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="o-wrapper c-portfolio-wrapper">
-    <site-footer></site-footer>
+    <!-- <site-footer></site-footer> -->
     <site-header></site-header>
     <main class="c-content-wrapper" role="main">
        <router-view
@@ -11,17 +11,13 @@
        </router-view>
     </main>
     <site-navigation>
-      <div class="c-site-navigation__rail">
-        <site-navigation-item link="/about" color="blue">About</site-navigation-item>
-        <site-navigation-item link="/work" color="orange">Work</site-navigation-item>
-        <site-navigation-item link="/outside-work" color="green">Outside of Work</site-navigation-item>
+      <div class="c-site-navigation__rail" v-if="beginNavAnime">
+        <site-navigation-item :link="item.url" :color="item.color" v-for="item in menu.left" transition="pop">{{item.text}}</site-navigation-item>
       </div>
-      <div class="c-site-navigation__rail c-site-navigation__rail--right">
-        <site-navigation-item link="/endorsements" color="purple">Endorsements</site-navigation-item>
-        <site-navigation-item link="/recognition" color="ocean">Recognition</site-navigation-item>
-        <site-navigation-item link="/lets-talk" color="red">Let's Talk</site-navigation-item>
+      <div class="c-site-navigation__rail c-site-navigation__rail--right"  v-if="beginNavAnime">
+        <site-navigation-item :link="item.url" :color="item.color" v-for="item in menu.right" transition="pop">{{item.text}}</site-navigation-item>
       </div>
-      <site-navigation-item link="/" color="link" home-link="true">Home</site-navigation-item>
+      <!-- <site-navigation-item link="/" color="link" home-link="true">Home</site-navigation-item> -->
     </site-navigation>
   </div>
 </template>
@@ -31,7 +27,19 @@ import SiteHeader from './components/site-header'
 import SiteNavigation from './components/site-navigation'
 import SiteNavigationItem from './components/site-navigation-item'
 import SiteFooter from './components/site-footer'
+import Store from './store/'
+
 export default {
+  ready () {
+    // Probably a better way to do this, but transitions were not running on inital component build
+    setTimeout(() => { this.beginNavAnime = true }, 1000)
+  },
+  data () {
+    return {
+      beginNavAnime: false,
+      menu: Store.menu
+    }
+  },
   components: {
     SiteHeader,
     SiteNavigation,
@@ -41,7 +49,8 @@ export default {
 }
 </script>
 
-<style src="./itcss.css"></style>
+<style src="./css/itcss.css"></style>
+<style src="./css/fonts.css"></style>
 <style>
 /* ==========================================================================
   Portfoilo
@@ -54,7 +63,7 @@ export default {
   color: #222;
   overflow-x: hidden;
   line-height: $lineHeight;
-  font-family: -apple-system, 'Avenir Next', Helvetica, arial, sans-serif;
+  font-family: $geomanistRegular;
 }
 /* ==========================================================================
   Portfolio wrapper
@@ -65,8 +74,8 @@ export default {
 .c-portfolio-wrapper{
   max-width: none;
   min-height: 100vh;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
   @media $tablet {
     margin: 0;
     padding-left: calc(($spacingUnit * 2));
@@ -93,7 +102,7 @@ export default {
 * Set a max width for large viewports
 */
 .c-content-wrapper{
-  //max-width: 1100px;
+  // max-width: 1100px;
 }
 /* ==========================================================================
   Page transtion component to help transitions

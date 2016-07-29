@@ -28,7 +28,7 @@ export default {
    ========================================================================== */
 
 .c-block__text--hero {
-  font-size: 1.6em
+  font-size: 1.8em
 }
 
 </style>

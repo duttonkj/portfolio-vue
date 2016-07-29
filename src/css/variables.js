@@ -1,4 +1,5 @@
-// config/colors.js
+
+var fontFallbacks = ", 'Avenir Next', Helvetica, arial, sans-serif";
 
 module.exports = {
   fontSize: '16px',
@@ -26,5 +27,10 @@ module.exports = {
   tablet: '(min-width: 48rem)',
   desktop: '(min-width: 56.25rem)',
   wide: '(min-width: 81.25rem)',
-  xWide: '(min-width: 95rem)'
+  xWide: '(min-width: 95rem)',
+
+  // fontFamilies
+  geomanistRegular: "'geomanistregular'" + fontFallbacks,
+  geomanistBlack: "'geomanistblack'" + fontFallbacks,
+  geomanistUltra: "'geomanistultra'" + fontFallbacks
 }

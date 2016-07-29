@@ -112,6 +112,7 @@ export default {}
   */
 
  .c-circle-headline__text {
+   font-family: $geomanistBlack;
    font-size: 40px;
    font-weight: bold;
    text-transform: uppercase;

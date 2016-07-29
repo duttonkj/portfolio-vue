@@ -23,8 +23,8 @@ export default {
 */
 
 .c-site-header {
-  //padding-top: calc($spacingUnit * 0.5);
-  padding-bottom: calc($spacingUnit * 0.5);
+  padding-top: calc($spacingUnit * 1);
+  padding-bottom: calc($spacingUnit * 1);
   font-size: 0.6rem;
   text-align: center;
   @media $desktop {
@@ -51,6 +51,7 @@ export default {
   border-bottom: 2px solid #115953;
   // background-color: rgba(17, 89, 83, 0.1);
   font-size: 2em;
+  font-family: $geomanistUltra;
   line-height: 1.2;
   text-transform: uppercase;
 }

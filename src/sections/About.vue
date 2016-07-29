@@ -4,6 +4,9 @@
       <block-base>
         <block-content>
           <block-text hero="true">I am a <span class="highlight">front-end</span> developer with <span class="highlight">15 years</span> of professional experience who builds <span class="highlight">applications</span> and <span class="highlight">interfaces</span> that meet business and design needs.</block-text>
+          <block-text><href url="https://github.com/duttonkj" decorate="true" new-tab="true" extra-class="c-site-footer__link">Github</href>
+          <href url="https://www.linkedin.com/in/kevindutton" decorate="true" new-tab="true" extra-class="c-site-footer__link">LinkedIn</href>
+          <href url="https://twitter.com/duttonkj" decorate="true" new-tab="true" extra-class="c-site-footer__link">Twitter</href></block-text>
           <!-- <block-text hero="true">I currently reside in Columbus, Ohio</block-text> -->
         </block-content>
       </block-base>

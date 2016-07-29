@@ -57,6 +57,7 @@ export default {
   text-transform: uppercase;
   color: $colorBase;
   font-size: 1em;
+  font-family: $geomanistBlack;
   line-height: 1;
   font-weight: normal;
 

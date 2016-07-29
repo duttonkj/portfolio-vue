@@ -7,6 +7,7 @@ import hooks from 'feathers-hooks'
 import authentication from 'feathers-authentication/client'
 
 // Import local data
+import Menu from './local-data/menu'
 import Endorsements from './local-data/endorsements'
 import Skills from './local-data/skills'
 
@@ -30,6 +31,14 @@ export default store
 
 // Api user for viewing work
 store.user = 'viewer@kevindutton.com'
+
+/*
+ * Menu Data
+ * ----------------
+ *  return local array of pages and link info
+ */
+
+store.menu = Menu
 
 /*
  * Endorsement Data

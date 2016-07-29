@@ -56,3 +56,9 @@ I setup a store as a gateway to all of the data.  Simple data are stored locally
 ### Continuous Deployment
 
 Continuous Deployments run through [DeployBot](https://deploybot.com/).  [![Deployment status from DeployBot](https://blast-on.deploybot.com/badge/34534836062568/80171.svg)](http://deploybot.com)
+
+## TODO
+1. Improve Mobile Menu
+2. Increase mobile paragraph size
+3. Incorporate custom fonts
+4. Add new work content

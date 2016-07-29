@@ -4,7 +4,7 @@
     {
       'c-site-navigation-item--home': homeLink
     }
-  ]" >
+  ]">
     <a v-link="link" class="c-site-navigation-item__link"><slot></slot></a>
   </div>
 </template>
@@ -43,7 +43,7 @@ export default {
 .c-site-navigation-item {
   display: block;
   will-change: transform;
-  // transform: scale(0);
+  transform: scale(0);
   transform-origin: 0 50%;
 
   @media $desktop {
@@ -54,6 +54,11 @@ export default {
 
   @media $wide {
     font-size: 1.2rem;
+  }
+
+  /* Change origin for right side items */
+  @nest .c-site-navigation__rail--right & {
+    transform-origin: 100% 50%;
   }
 }
 
@@ -66,7 +71,7 @@ export default {
 */
 
 .c-site-navigation-item__link {
-  width: 100%;
+  width: auto;
   height: 100%;
   padding: $spacingUnit 0;
   display: flex;
@@ -100,7 +105,7 @@ export default {
 *  but have not dug one up yet for postcss
 */
 
-$hoverEffect: whiteness(15%);
+$hoverEffect: blackness(15%);
 
 /* Purple */
 .c-site-navigation-item--purple {
