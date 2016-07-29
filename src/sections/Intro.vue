@@ -34,6 +34,7 @@ export default {
     deactivate () {
       console.log('REMOVE ANIMATIONS')
       anime.remove('.js-circle-headline__svg')
+      this.isAnimating = false
     }
   },
   methods: {

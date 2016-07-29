@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="o-wrapper c-portfolio-wrapper">
+    <site-footer></site-footer>
     <site-header></site-header>
     <main class="c-content-wrapper" role="main">
        <router-view
@@ -22,7 +23,6 @@
       </div>
       <site-navigation-item link="/" color="link" home-link="true">Home</site-navigation-item>
     </site-navigation>
-    <site-footer></site-footer>
   </div>
 </template>
 
@@ -103,7 +103,7 @@ export default {
 */
 
 .c-content-wrapper{
-  max-width: 1100px;
+  //max-width: 1100px;
 }
 
 

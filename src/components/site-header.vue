@@ -23,8 +23,8 @@ export default {
 */
 
 .c-site-header {
-  padding-top: calc($spacingUnit * 2);
-  padding-bottom: calc($spacingUnit * 1);
+  //padding-top: calc($spacingUnit * 0.5);
+  padding-bottom: calc($spacingUnit * 0.5);
   font-size: 1rem;
   text-align: center;
 }
@@ -37,15 +37,16 @@ export default {
 */
 
 .c-site-header__title {
-  //display: inline-block;
+  display: inline-block;
   margin: 0 auto;
-  padding: calc($spacingUnit * 0.2) calc($spacingUnit / 1);
+  padding: calc($spacingUnit * 0.2) calc($spacingUnit);
   color: #115953;
-  border-bottom: 4px solid $colorBorderPrimary;
-  /*border-top: 20px solid #115953;*/
-  /*background-color: rgba(17, 89, 83, 0.1);*/
-  font-size: 5em;
+  //border-bottom: 4px solid $colorBorderPrimary;
+  border-bottom: 2px solid #115953;
+  // background-color: rgba(17, 89, 83, 0.1);
+  font-size: 2em;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 /* Header title

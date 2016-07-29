@@ -29,11 +29,11 @@ export default {
 */
 
 .c-site-footer {
-  padding-top: calc($spacingUnit * 2);
-  padding-bottom: calc($spacingUnit * 2);
+  padding-top: calc($spacingUnit * 0.5);
+  padding-bottom: calc($spacingUnit * 0.5);
   font-size: 0.8rem;
   text-align: center;
-  border-top: 4px solid $colorBorderPrimary;
+  //border-bottom: 1px solid $colorBorderPrimary;
 }
 
 
