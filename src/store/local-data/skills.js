@@ -14,7 +14,7 @@ export default [
   'emberjs',
   'reactjs',
   'flux',
-  'jQuery',
+  'jquery',
   'webpack',
   'gulp',
   'npm',
@@ -27,5 +27,5 @@ export default [
   'unbuntu',
   'apache',
   'nginx',
-  'conintuous deployments'
+  'continuous deployments'
 ]

@@ -19,7 +19,7 @@ export default {
   right: [
     {
       url: '/endorsements',
-      text: 'Endsorsements',
+      text: 'Endorsements',
       color: 'purple'
     },
     {
