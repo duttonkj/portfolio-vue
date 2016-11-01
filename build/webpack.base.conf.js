@@ -93,7 +93,7 @@ module.exports = {
         require("postcss-url")(),
         vars({
             variables: function () {
-                return require('./../src/css/variables');
+                return require('./../src/assets/css/variables');
             }
         }),
         require('postcss-inline-media')(),

@@ -49,8 +49,8 @@ export default {
 }
 </script>
 
-<style src="./css/itcss.css"></style>
-<style src="./css/fonts.css"></style>
+<style src="assets/css/itcss.css"></style>
+<style src="assets/css/fonts.css"></style>
 <style>
 /* ==========================================================================
   Portfoilo
@@ -95,6 +95,7 @@ export default {
     padding-right: calc(($spacingUnit * 10) + $navWidth);
   }
 }
+
 /* ==========================================================================
   Content wrapper
   ========================================================================== */
@@ -104,6 +105,7 @@ export default {
 .c-content-wrapper{
   // max-width: 1100px;
 }
+
 /* ==========================================================================
   Page transtion component to help transitions
   ========================================================================== */
