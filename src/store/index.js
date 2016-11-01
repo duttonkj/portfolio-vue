@@ -11,10 +11,9 @@ import Menu from './local-data/menu'
 import Endorsements from './local-data/endorsements'
 import Skills from './local-data/skills'
 
-const apiUrl = 'http://api.kevindutton.com/'
+const apiUrl = process.env.API_HOST
 const store = new EventEmitter()
 const socket = io(apiUrl)
-// const user = 'viewer@kevindutton.com'
 
 // Initialize our Feathers client application through Socket.io
 // with hooks and authentication.
