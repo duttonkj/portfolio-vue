@@ -43,8 +43,9 @@ export default {
 .c-site-navigation-item {
   display: block;
   will-change: transform;
-  transform: scale(0);
   transform-origin: 0 50%;
+  backface-visibility: hidden;
+  perspective: 1000;
 
   @media $desktop {
     width: $navWidth;
@@ -65,7 +66,6 @@ export default {
 
 /* Link nested inside
    ========================================================================== */
-
 /**
 *
 */
@@ -83,6 +83,7 @@ export default {
   text-decoration: none;
   transition: all 100ms ease-out;
   will-change: transform;
+  backface-visibility: hidden;
 
   &:visited {
     color: white;
