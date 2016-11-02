@@ -8,7 +8,7 @@
       <block-content>
         <block-text>{{{project.description}}}</block-text>
       </block-content>
-      <btn url="project.url" new-tab="true">View</btn>
+      <btn :url="project.url" new-tab="true">View</btn>
       <img :src="project.images[0]" />
     </block-base>
   </div>
