@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="o-wrapper c-portfolio-wrapper">
-    <!-- <site-footer></site-footer> -->
     <site-header></site-header>
     <main class="c-content-wrapper" role="main">
        <router-view
@@ -17,7 +16,6 @@
       <div class="c-site-navigation__rail c-site-navigation__rail--right"  v-if="beginNavAnime">
         <site-navigation-item :link="item.url" :color="item.color" v-for="item in menu.right" transition="pop">{{item.text}}</site-navigation-item>
       </div>
-      <!-- <site-navigation-item link="/" color="link" home-link="true">Home</site-navigation-item> -->
     </site-navigation>
   </div>
 </template>
@@ -31,8 +29,7 @@ import Store from './store/'
 
 export default {
   ready () {
-    // Probably a better way to do this, but transitions were not running on inital component build
-    setTimeout(() => { this.beginNavAnime = true }, 1000)
+    this.$nextTick(() => (this.beginNavAnime = true))
   },
   data () {
     return {
