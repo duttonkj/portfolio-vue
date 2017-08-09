@@ -1,5 +1,4 @@
 import { EventEmitter } from 'events'
-import { Promise } from 'es6-promise'
 import io from 'socket.io-client'
 import feathers from 'feathers/client'
 import socketio from 'feathers-socketio/client'
@@ -72,15 +71,7 @@ store.authenticate = obj => {
  */
 
 store.fetchWork = () => {
-  return new Promise((resolve, reject) => {
-    workService.find()
-      .then(page => {
-        // Only return the data array, not wrapping object
-        resolve(page.data)
-      })
-      .catch(error => {
-        console.error(error)
-        reject(error)
-      })
-  })
+  return workService.find()
+      .then(page => page.data)
+      .catch(error => console.warn(error))
 }

@@ -3,8 +3,9 @@
         <circle-headline></circle-headline>
         <div class="c-site-intro__banner">
           <h4 class="c-site-intro__subtitle">
-            A <underlined-word :accolade.once="accolades[selectedSlot]"></underlined-word>  developer<br/> looking for a <strong>great new opportunity</strong>
+            A <underlined-word :accolade.once="accolades[selectedSlot]"></underlined-word>  developer<br/>
           </h4>
+          
             <p class="c-site-intro__footnote"><sup>*</sup>Adjectives used by colleagues to describe Kevin</p>
           </h4>
         </div>
